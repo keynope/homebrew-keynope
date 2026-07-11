@@ -1,7 +1,7 @@
 class Keynope < Formula
   desc "Retro terminal presentation tool"
   homepage "https://github.com/keynope/keynope"
-  version "0.1.0"
+  version "0.1.1"
 
   depends_on :macos
 
@@ -12,12 +12,12 @@ class Keynope < Formula
 
     on_arm do
       url "https://github.com/keynope/keynope/releases/download/#{release_tag}/keynope-mac-arm64.tar.gz"
-      sha256 "0885c3b97c2a4f66fd8af0ba552bc2690f97d8dd285d3ae99f17699277295f16"
+      sha256 "f6ab4b9afaad01bf70881ccde0cedd714df736f11c2a19eca640f4ec22b13868"
     end
 
     on_intel do
       url "https://github.com/keynope/keynope/releases/download/#{release_tag}/keynope-mac-amd64.tar.gz"
-      sha256 "13137538d33b5e7d29fb651a77686adc974e137b4ba830f23c33491bdffab455"
+      sha256 "bd6e609cca7409bfde4e660b38678e99970afb50bb719b3122ed67ba89abac67"
     end
   end
 
