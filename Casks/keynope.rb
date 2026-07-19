@@ -1,17 +1,12 @@
 cask "keynope" do
   version "0.1.2"
+  arch arm: "arm64", intel: "amd64"
 
-  on_arm do
-    sha256 "3977a6935fe70c823b8b1f08bb6b09c35f76c259239c9600f3deecd52b7d2b3f"
-    url "https://github.com/keynope/keynope/releases/download/#{version}/keynope-mac-arm64.tar.gz",
-        verified: "github.com/keynope/keynope/"
-  end
+  sha256 arm:   "3977a6935fe70c823b8b1f08bb6b09c35f76c259239c9600f3deecd52b7d2b3f",
+         intel: "deb4e88825b48cbba71a138dd388fbb3c7db4892fb7951870b44fc8918b5b1b1"
 
-  on_intel do
-    sha256 "deb4e88825b48cbba71a138dd388fbb3c7db4892fb7951870b44fc8918b5b1b1"
-    url "https://github.com/keynope/keynope/releases/download/#{version}/keynope-mac-amd64.tar.gz",
-        verified: "github.com/keynope/keynope/"
-  end
+  url "https://github.com/keynope/keynope/releases/download/#{version}/keynope-mac-#{arch}.tar.gz",
+      verified: "github.com/keynope/keynope/"
 
   name "Keynope"
   desc "Retro terminal presentation tool"
@@ -19,8 +14,8 @@ cask "keynope" do
 
   depends_on macos: :sonoma
 
-  app "Keynope.app"
-  binary "keynope"
+  app "keynope-mac-#{arch}/Keynope.app"
+  binary "keynope-mac-#{arch}/keynope"
 
   zap trash: [
     "~/Library/Application Support/Keynope",
