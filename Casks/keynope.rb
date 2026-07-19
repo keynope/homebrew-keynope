@@ -15,7 +15,7 @@ cask "keynope" do
   desc "Retro terminal presentation tool"
   homepage "https://keynope.sh/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Keynope.app"
   binary "keynope"
