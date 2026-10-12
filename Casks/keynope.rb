@@ -1,9 +1,9 @@
 cask "keynope" do
-  version "1.8.1"
+  version "1.8.2"
   arch arm: "arm64", intel: "amd64"
 
-  sha256 arm:   "6c04a9eece973889d57f1be2c235a6d74a269a1e1951e5be7769b7b2c06eeafe",
-         intel: "e86d947d2e60c54bd4dd2f6a2ab1d4487e0facb73e51508109fc40993f54baf9"
+  sha256 arm:   "e97d940108e89899896b0364614a6c00822018c2e772335f617637c194b40023",
+         intel: "8544859c33e91094e0d430a1e08334f6d42165a11e0fe27b341f550889b1f521"
 
   url "https://github.com/keynope/keynope/releases/download/#{version}/keynope-mac-#{arch}.tar.gz",
       verified: "github.com/keynope/keynope/"
